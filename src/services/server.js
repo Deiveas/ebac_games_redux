@@ -4,8 +4,22 @@ import cors from 'cors'
 const app = express()
 const PORT = 4000
 
-app.use(cors())
-app.use(json())
+app.use(
+  cors({
+    origin: true,
+    credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    exposedHeaders: ['Access-Control-Allow-Private-Network']
+  })
+)
+
+app.use(express.json())
+
+// Middleware para adicionar o cabeçalho Access-Control-Allow-Private-Network
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Private-Network', 'true')
+  next()
+})
 
 app.get('/produtos', (req, res) => {
   res.json([

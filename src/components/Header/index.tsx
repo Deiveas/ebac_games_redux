@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <S.Header>
-      <h1>DAS Games</h1>
+      <h1>DAS Games Collections</h1>
       <div>
         <img src={cesta} />
         <span>

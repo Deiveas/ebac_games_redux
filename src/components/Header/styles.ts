@@ -12,6 +12,7 @@ export const Header = styled.header`
   display: flex;
   border-radius: 6px;
   align-items: center;
+  justify-content: space-between;
 
   h1 {
     font-size: 18px;
@@ -29,9 +30,22 @@ export const Header = styled.header`
 
   @media (max-width: 768px) {
     flex-direction: column;
+    align-items: flex-start;
+
+    h1 {
+      margin-bottom: 16px;
+      width: 100%;
+    }
 
     div {
-      margin-top: 16px;
+      width: 100%;
+      justify-content: flex-start;
+      margin-top: 0;
+
+      img {
+        width: 24px; /* Aumente o tamanho da imagem se necessário */
+        margin-right: 8px;
+      }
     }
   }
 `

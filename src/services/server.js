@@ -1,4 +1,4 @@
-import express, { json } from 'express'
+import express from 'express'
 import cors from 'cors'
 
 const app = express()
@@ -95,7 +95,7 @@ app.get('/produtos', (req, res) => {
     },
     {
       id: 8,
-      titulo: 'Resident Evil MegaCombo',
+      titulo: 'Resident Evil +Plus',
       plataformas: ['XBOX ONE'],
       precoAntigo: null,
       preco: 549.9,

@@ -1,10 +1,27 @@
 import styled from 'styled-components'
-
 import { cores } from '../../styles'
 
-export const Produto = styled.div``
+export const Produto = styled.div`
+  background-color: #1e1e1e; /* Adicionei uma cor de fundo para melhor visualização */
+  padding: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
-export const Titulo = styled.h3``
+  @media (max-width: 768px) {
+    padding: 8px;
+  }
+`
+
+export const Titulo = styled.h3`
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 8px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+`
 
 export const Capa = styled.div`
   position: relative;
@@ -14,6 +31,11 @@ export const Capa = styled.div`
     width: 100%;
     height: 260px;
     margin-bottom: 8px;
+    object-fit: cover; /* Adicionado para garantir que a imagem mantenha sua proporção */
+
+    @media (max-width: 768px) {
+      height: 200px;
+    }
   }
 `
 
@@ -42,7 +64,13 @@ export const Tag = styled.span`
   font-size: 12px;
   font-weight: 700;
   color: #fff;
+
+  @media (max-width: 768px) {
+    padding: 4px;
+    font-size: 10px;
+  }
 `
+
 export const Plataformas = styled.ul`
   display: flex;
   flex-wrap: wrap;
@@ -57,8 +85,14 @@ export const Plataformas = styled.ul`
     margin-bottom: 8px;
     color: #fff;
     font-weight: bold;
+
+    @media (max-width: 768px) {
+      font-size: 8px;
+      padding: 4px;
+    }
   }
 `
+
 export const BtnComprar = styled.button`
   display: block;
   width: 100%;
@@ -82,5 +116,10 @@ export const BtnComprar = styled.button`
       ${cores.corPrincipal},
       ${cores.corSecundaria}
     );
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 10px 0;
   }
 `

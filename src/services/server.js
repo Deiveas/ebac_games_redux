@@ -100,7 +100,8 @@ app.get('/produtos', (req, res) => {
       precoAntigo: null,
       preco: 549.9,
       categoria: 'Terror',
-      imagem: 'https://i.ebayimg.com/images/g/acwAAOSwFMRhN93o/s-l1600.webp'
+      imagem:
+        'https://img.ws.mms.shopee.com.br/71b3128fdead393dcbb540eff78873e4'
     }
   ])
 })
